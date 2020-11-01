@@ -9,7 +9,7 @@ int main() {
   cout << "NIM\t: 191110236" << endl;
   cout << "-----------------------------------" << endl;
 
-  cout << "Masukkan Nilai Akhir : ";
+  cout << "Masukkan Nilai Akhir : ";s
   cin >> nilai_akhir;
 
   do {
