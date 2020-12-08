@@ -6,9 +6,12 @@ void breakdown(int money) {
   int sheet_2 = 5000;
   int sheet_3 = 1000;
 
+  int mod_1 = money % sheet_1;
+  int mod_2 = mod_1 % sheet_2;
+
   int one = money / sheet_1;
-  int two = (money - (sheet_1 * one)) / sheet_2;
-  int three = (money - ((sheet_1 * one) + (sheet_2 * two))) / sheet_3;
+  int two = mod_1 / sheet_2;
+  int three = mod_2 / sheet_3;
 
   cout << "<" << (int)one << ", " << (int)two << ", " << (int)three << ">\n";
 }
