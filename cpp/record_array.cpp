@@ -7,7 +7,7 @@ int main() {
         char name[100];
         char address[200];
         char role[100];
-        int sallary;
+        int salary;
     } employee[5];
 
     // Input Employees
@@ -22,14 +22,18 @@ int main() {
         cout << "Bagian " << i + 1 << "\t: ";
 		cin  >> employee[i].role;
         cout << "Gaji   " << i + 1 << "\t: ";
-		cin  >> employee[i].sallary;
+		cin  >> employee[i].salary;
+        cout << endl;
 	}
 
     // Show Employees
-    cout << "\nOutput Data Karyawan \n";
+    cout << "Output Data Karyawan \n";
+    cout << "---------------------------------- \n";
+    cout << "\n---------------------------------- \n";
+    cout << "Nama, Alamat, Bagian, Gaji \n";
     cout << "---------------------------------- \n";
     for (i = 0; i < 5; i++) {
-        cout << employee[i].name << "," << employee[i].address << "," << employee[i].role << "," << employee[i].sallary << "\n";
+        cout << employee[i].name << ", " << employee[i].address << ", " << employee[i].role << ", " << employee[i].salary << "\n";
     }
 
     cout << "\n";
