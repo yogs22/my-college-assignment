@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+// STRUCT DALAM ARRAY # PRAKTIKUM ALGORITMA MODUL 6
+
 int main() {
     int i;
     struct Employees {
