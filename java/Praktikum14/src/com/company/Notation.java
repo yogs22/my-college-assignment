@@ -9,7 +9,7 @@ public class Notation {
         }
 
         int total = value + (2 * value);
-        System.out.println("∑"+data+",k=1(x+2i) = "+total);
+        System.out.println("∑"+data+",i=1(x+2i) = "+total);
     }
 
     public static void main(String[] args) {
