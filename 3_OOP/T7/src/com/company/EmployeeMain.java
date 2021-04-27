@@ -9,7 +9,7 @@ public class EmployeeMain {
 	    EmployeeMain employee =  new EmployeeMain();
 	    employee.whoAmI("191110236", "Yogi Prasetyawan Hadi");
         employee.Employee(new Manager("Manager", "2.000.000"));
-        employee.Employee(new Manager("Staff", "1.000.000"));
+        employee.Employee(new Staff("Staff", "1.000.000"));
     }
 
     private void whoAmI(String nim, String name) {
