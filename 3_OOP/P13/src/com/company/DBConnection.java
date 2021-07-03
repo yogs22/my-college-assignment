@@ -4,8 +4,8 @@ import java.sql.*;
 public class DBConnection {
     String url, usr, pwd, db;
     public DBConnection() {
-        db = "javadb";
-        url = "jdbc:mysql://localhost"+db;
+        db = "kl_javadb";
+        url = "jdbc:mysql://localhost/" + db;
         usr = "root";
         pwd = "password";
     }
@@ -13,7 +13,7 @@ public class DBConnection {
     public Connection getConnection() {
         Connection con = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url, usr, pwd);
             System.out.println("Ok : Driver Ditemukan");
         }
