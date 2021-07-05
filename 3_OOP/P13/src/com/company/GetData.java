@@ -16,7 +16,10 @@ public class GetData extends JPanel {
         Connection mysql = open.getConnection();
 
         try {
-            Statement stmt = mysql.createStatement();
+            Statement stmt = mysql.createStatement(
+                ResultSet.TYPE_SCROLL_INSENSITIVE,
+                ResultSet.CONCUR_READ_ONLY
+            );
             String sql = "SELECT * FROM mahasiswa";
             ResultSet res = stmt.executeQuery(sql);
             ResultSetMetaData meta = res.getMetaData();
