@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulir Registrasi Siswa</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="bootstrap-grid.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Formulir Registrasi Siswa</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="post">
+                        <div class="form-group mb-2">
+                            <label for="nisn" class="required">NISN</label>
+                            <input class="form-control" type="number" name="nisn" placeholder="Ex: 9999090" id="nisn" required>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="name" class="required">Nama Lengkap</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label for="born" class="required">Tempat Lahir</label>
+                                    <input class="form-control" type="text" name="born" id="born" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group mb-2">
+                                    <label for="birthday" class="required">Tanggal Lahir</label>
+                                    <input class="form-control" type="date" name="birthday" id="birthday" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="gender" class="required">Jenis Kelamin</label> <br>
+                            <input type="radio" name="gender" value="laki-laki"> Laki-Laki <br>
+                            <input type="radio" name="gender" value="perempuan"> Perempuan
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="religion" class="required">Agama</label>
+                            <select class="form-control" name="religion" id="religion" required>
+                                <option value="islam">Islam</option>
+                                <option value="kristen">Kristen</option>
+                                <option value="katolik">Katolik</option>
+                                <option value="hindu">Hindu</option>
+                                <option value="budha">Buda</option>
+                                <option value="konghucu">Kong Hu Cu</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="address" class="required">Alamat</label>
+                            <textarea class="form-control" name="address" id="address" rows="3" cols="80" placeholder="Pastikan alamat lengkap" required></textarea>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="wa_number" class="required">No. Whatsapp</label>
+                            <input class="form-control" type="number" name="wa_number" placeholder="628718378123" id="wa_number" required>
+                        </div>
+                        <button type="submit" class="btn btn-yellow">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
