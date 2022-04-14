@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style media="screen">
+        body {
+            font-family: 'Arial';
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Yogi Prasetyawan Hadi / 19111026</h2>
+    <?php
+        function sum($x, $y) {
+            $z = $x + $y;
+            return $z;
+        }
+        echo "5 + 10 = " . sum(5,10) . "<br>";
+        echo "7 + 13 = " . sum(7,13) . "<br>";
+        echo "2 + 4 = " . sum(2,4);
+    ?>
+</body>
+</html>
