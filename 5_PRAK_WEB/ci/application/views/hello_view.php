@@ -3,8 +3,8 @@
         <title>MVC</title>
     </head>
     <body>
-        <h2>LATIHAN MVC</h2>
-        <p><?= $text ?></p>
-        <p><?= $nim ?> <?= $name ?></p>
+        <h1>Assesment MVC</h1>
+        <p>NIM : <?= $nim ?></p>
+        <p>Nama : <?= $name ?></p>
     </body>
 </html>

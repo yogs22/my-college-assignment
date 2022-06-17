@@ -1,5 +1,6 @@
 <?php
 class Hello_model extends CI_Model
 {
-    public $string = 'Hello World !';
+    public $name = 'Yogi Prasetyawan';
+    public $nim = '191110236';
 }

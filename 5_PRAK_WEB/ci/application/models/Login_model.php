@@ -2,16 +2,24 @@
 class Login_model extends CI_Model {
     public $username;
     public $password;
-    public $nama;
-    public function construct() {
-        parent::_construct();
+    public $name;
+    public $email;
+    public $level;
+
+    public function __construct() {
+        parent::__construct();
         $this->load->database();
     }
 
     public function login_check(){
-        $sql=sprintf("SELECT COUNT(*) AS cnt FROM user WHERE username='%s' AND password=PASSWORD('%s')", $this->username, $this->password);
+        $sql= "SELECT * FROM user WHERE username='". $this->username ."' AND password='". $this->password ."'";
         $query = $this->db->query($sql);
         $row = $query->row_array();
-        return $row['cnt'] == 0;
+
+        if ($row == null) {
+            return false;
+        }
+
+        return $row;
     }
 }

@@ -1,8 +1,10 @@
 <?php
-class Login extends CI_Controller{
+class Login extends CI_Controller
+{
     public $model = NULL;
-    public function construct(){
-        parent::_construct();
+
+    public function __construct(){
+        parent::__construct();
         $this->load->model('login_model');
         $this->model = $this->login_model;
     }
@@ -11,11 +13,17 @@ class Login extends CI_Controller{
         if (isset($_POST['btnSubmit'])){
             $this->model->username = $this->input->post('username');
             $this->model->password = $this->input->post('password');
-            if ($this->model->login_check() == TRUE) {
-                $this->session->set_userdata('username', $this->model->username);
-                $this->load->view('login_success_view',['model' => $this->model]);
+            if ($this->model->login_check() != false) {
+                $session = $this->model->login_check();
+                $this->model->name = $session['name'];
+                $this->model->email = $session['email'];
+                $this->model->level = $session['level'];
+                $this->model->username = $session['username'];
+
+                return redirect(base_url("admin"));
             } else {
-                redirect('login');
+                $this->model->error = 'Maaf username / password salah';
+                return $this->load->view('login_form_view',['model' => $this->model]);
             }
         } else {
             $this->load->view('login_form_view',['model' => $this->model]);
@@ -25,7 +33,7 @@ class Login extends CI_Controller{
     public function logout(){
         if($this->session->has_userdata('username')) {
             $this->session->sess_destroy();
-            $this->load->view('login_form_view',['model' => $this->model]);
+            return redirect(base_url("login"));
         }
     }
 }
