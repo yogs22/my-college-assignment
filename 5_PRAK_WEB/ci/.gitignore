@@ -16,6 +16,9 @@ user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 /vendor/
+system/ci_sessions
+assets/admin/pages
+assets/admin/docs
 
 # IDE Files
 #-------------------------
@@ -30,4 +33,3 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
-/system/ci_sessions

@@ -37,6 +37,22 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="<?= site_url('hotel') ?>" class="nav-link <?php if (base_url(uri_string()) == site_url('hotel')) { ?> active <?php } ?>">
+            <i class="nav-icon fas fa-hotel"></i>
+            <p>
+              Hotel
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('report') ?>" class="nav-link <?php if (base_url(uri_string()) == site_url('report')) { ?> active <?php } ?>">
+            <i class="nav-icon fas fa-download"></i>
+            <p>
+              Laporan Kerusakan
+            </p>
+          </a>
+        </li>
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
